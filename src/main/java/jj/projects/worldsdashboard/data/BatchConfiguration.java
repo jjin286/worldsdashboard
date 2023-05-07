@@ -33,6 +33,7 @@ public class BatchConfiguration {
                 .fieldSetMapper(new BeanWrapperFieldSetMapper<ChampionInput>() {{
                     setTargetType(ChampionInput.class);
                 }})
+                .linesToSkip(1)
                 .build();
     }
 

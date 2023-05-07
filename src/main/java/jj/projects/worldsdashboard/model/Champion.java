@@ -6,32 +6,32 @@ import jakarta.persistence.Id;
 @Entity
 public class Champion {
     @Id
-    private String id;
+    private int id;
     private String champion;
-    private String sumTotal;
-    private String winTotal;
-    private String loseTotal;
+    private int sumTotal;
+    private int winTotal;
+    private int loseTotal;
     private String winrateTotal;
     private String pickRate;
-    private String sumBlueSide;
-    private String winBlueSide;
-    private String loseBlueSide;
+    private int sumBlueSide;
+    private int winBlueSide;
+    private int loseBlueSide;
     private String winrateBlueSide;
-    private String sumRedSide;
-    private String winRedSide;
-    private String loseRedSide;
+    private int sumRedSide;
+    private int winRedSide;
+    private int loseRedSide;
     private String winrateRedSide;
-    private String sumBans;
+    private int sumBans;
     private String banRate;
-    private String sumPickBan;
+    private int sumPickBan;
     private String pickBanRate;
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -43,27 +43,27 @@ public class Champion {
         this.champion = champion;
     }
 
-    public String getSumTotal() {
+    public int getSumTotal() {
         return sumTotal;
     }
 
-    public void setSumTotal(String sumTotal) {
+    public void setSumTotal(int sumTotal) {
         this.sumTotal = sumTotal;
     }
 
-    public String getWinTotal() {
+    public int getWinTotal() {
         return winTotal;
     }
 
-    public void setWinTotal(String winTotal) {
+    public void setWinTotal(int winTotal) {
         this.winTotal = winTotal;
     }
 
-    public String getLoseTotal() {
+    public int getLoseTotal() {
         return loseTotal;
     }
 
-    public void setLoseTotal(String loseTotal) {
+    public void setLoseTotal(int loseTotal) {
         this.loseTotal = loseTotal;
     }
 
@@ -83,27 +83,27 @@ public class Champion {
         this.pickRate = pickRate;
     }
 
-    public String getSumBlueSide() {
+    public int getSumBlueSide() {
         return sumBlueSide;
     }
 
-    public void setSumBlueSide(String sumBlueSide) {
+    public void setSumBlueSide(int sumBlueSide) {
         this.sumBlueSide = sumBlueSide;
     }
 
-    public String getWinBlueSide() {
+    public int getWinBlueSide() {
         return winBlueSide;
     }
 
-    public void setWinBlueSide(String winBlueSide) {
+    public void setWinBlueSide(int winBlueSide) {
         this.winBlueSide = winBlueSide;
     }
 
-    public String getLoseBlueSide() {
+    public int getLoseBlueSide() {
         return loseBlueSide;
     }
 
-    public void setLoseBlueSide(String loseBlueSide) {
+    public void setLoseBlueSide(int loseBlueSide) {
         this.loseBlueSide = loseBlueSide;
     }
 
@@ -115,27 +115,27 @@ public class Champion {
         this.winrateBlueSide = winrateBlueSide;
     }
 
-    public String getSumRedSide() {
+    public int getSumRedSide() {
         return sumRedSide;
     }
 
-    public void setSumRedSide(String sumRedSide) {
+    public void setSumRedSide(int sumRedSide) {
         this.sumRedSide = sumRedSide;
     }
 
-    public String getWinRedSide() {
+    public int getWinRedSide() {
         return winRedSide;
     }
 
-    public void setWinRedSide(String winRedSide) {
+    public void setWinRedSide(int winRedSide) {
         this.winRedSide = winRedSide;
     }
 
-    public String getLoseRedSide() {
+    public int getLoseRedSide() {
         return loseRedSide;
     }
 
-    public void setLoseRedSide(String loseRedSide) {
+    public void setLoseRedSide(int loseRedSide) {
         this.loseRedSide = loseRedSide;
     }
 
@@ -147,11 +147,11 @@ public class Champion {
         this.winrateRedSide = winrateRedSide;
     }
 
-    public String getSumBans() {
+    public int getSumBans() {
         return sumBans;
     }
 
-    public void setSumBans(String sumBans) {
+    public void setSumBans(int sumBans) {
         this.sumBans = sumBans;
     }
 
@@ -163,11 +163,11 @@ public class Champion {
         this.banRate = banRate;
     }
 
-    public String getSumPickBan() {
+    public int getSumPickBan() {
         return sumPickBan;
     }
 
-    public void setSumPickBan(String sumPickBan) {
+    public void setSumPickBan(int sumPickBan) {
         this.sumPickBan = sumPickBan;
     }
 

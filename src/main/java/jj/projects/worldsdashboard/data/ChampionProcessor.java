@@ -12,24 +12,24 @@ public class ChampionProcessor implements ItemProcessor<ChampionInput, Champion>
     @Override
     public Champion process(final ChampionInput championInput) throws Exception {
         Champion champion = new Champion();
-        champion.setId(championInput.getId());
+        champion.setId(Integer.parseInt(championInput.getId()));
         champion.setChampion(championInput.getChampion());
-        champion.setSumTotal(championInput.getSum_total());
-        champion.setWinTotal(championInput.getWin_total());
-        champion.setLoseTotal(championInput.getLose_total());
+        champion.setSumTotal(Integer.parseInt(championInput.getSum_total()));
+        champion.setWinTotal(Integer.parseInt(championInput.getWin_total()));
+        champion.setLoseTotal(Integer.parseInt(championInput.getLose_total()));
         champion.setWinrateTotal(championInput.getWinrate_total());
         champion.setPickRate(championInput.getPick_rate());
-        champion.setSumBlueSide(championInput.getSum_blue_side());
-        champion.setWinBlueSide(championInput.getWin_blue_side());
-        champion.setLoseBlueSide(championInput.getLose_blue_side());
+        champion.setSumBlueSide(Integer.parseInt(championInput.getSum_blue_side()));
+        champion.setWinBlueSide(Integer.parseInt(championInput.getWin_blue_side()));
+        champion.setLoseBlueSide(Integer.parseInt(championInput.getLose_blue_side()));
         champion.setWinrateBlueSide(championInput.getWinrate_blue_side());
-        champion.setSumRedSide(championInput.getSum_red_side());
-        champion.setWinRedSide(championInput.getWin_red_side());
-        champion.setLoseRedSide(championInput.getLose_red_side());
+        champion.setSumRedSide(Integer.parseInt(championInput.getSum_red_side()));
+        champion.setWinRedSide(Integer.parseInt(championInput.getWin_red_side()));
+        champion.setLoseRedSide(Integer.parseInt(championInput.getLose_red_side()));
         champion.setWinrateRedSide(championInput.getWinrate_red_side());
-        champion.setSumBans(championInput.getSum_bans());
+        champion.setSumBans(Integer.parseInt(championInput.getSum_bans()));
         champion.setBanRate(championInput.getBan_rate());
-        champion.setSumPickBan(championInput.getSum_pick_ban());
+        champion.setSumPickBan(Integer.parseInt(championInput.getSum_pick_ban()));
         champion.setPickBanRate(championInput.getPick_ban_rate());
         log.info("Converting (" + championInput + ") into (" + champion + ")");
         return champion;
