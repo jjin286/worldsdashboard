@@ -178,4 +178,33 @@ public class Champion {
     public void setPickBanRate(String pickBanRate) {
         this.pickBanRate = pickBanRate;
     }
+
+    @Override
+    public String toString() {
+        return "Champion{" +
+                "id=" + id +
+                ", champion='" + champion + '\'' +
+                ", sumTotal=" + sumTotal +
+                ", winTotal=" + winTotal +
+                ", loseTotal=" + loseTotal +
+                ", winrateTotal='" + winrateTotal + '\'' +
+                ", pickRate='" + pickRate + '\'' +
+                ", sumBlueSide=" + sumBlueSide +
+                ", winBlueSide=" + winBlueSide +
+                ", loseBlueSide=" + loseBlueSide +
+                ", winrateBlueSide='" + winrateBlueSide + '\'' +
+                ", sumRedSide=" + sumRedSide +
+                ", winRedSide=" + winRedSide +
+                ", loseRedSide=" + loseRedSide +
+                ", winrateRedSide='" + winrateRedSide + '\'' +
+                ", sumBans=" + sumBans +
+                ", banRate='" + banRate + '\'' +
+                ", sumPickBan=" + sumPickBan +
+                ", pickBanRate='" + pickBanRate + '\'' +
+                '}';
+    }
+
+    public Champion(){
+
+    }
 }

@@ -26,7 +26,7 @@ public class BatchConfiguration {
     public FlatFileItemReader<ChampionInput> reader() {
         return new FlatFileItemReaderBuilder<ChampionInput>()
                 .name("championReader")
-                .resource(new ClassPathResource("wc_champions.csv"))
+                .resource(new ClassPathResource("Worlds Data/Worlds 2021/wc_champions.csv"))
                 .delimited()
                 .names(new String[]{"id","champion","sum_total","win_total","lose_total","winrate_total","pick_rate","sum_blue_side","win_blue_side","lose_blue_side","winrate_blue_side","sum_red_side","win_red_side","lose_red_side","winrate_red_side","sum_bans","ban_rate","sum_pick_ban","pick_ban_rate"
                 })
