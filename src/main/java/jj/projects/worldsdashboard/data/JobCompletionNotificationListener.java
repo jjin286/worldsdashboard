@@ -1,6 +1,5 @@
 package jj.projects.worldsdashboard.data;
 
-        import jj.projects.worldsdashboard.model.Champion;
         import org.slf4j.Logger;
         import org.slf4j.LoggerFactory;
         import org.springframework.batch.core.BatchStatus;
