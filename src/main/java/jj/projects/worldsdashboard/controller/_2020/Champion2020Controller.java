@@ -20,7 +20,7 @@ public class Champion2020Controller {
     }
 
     @GetMapping("/champion/2020/{champion}")
-    public Champion2020 getChampion(@PathVariable String champion) {
+    public Champion2020 getChampion2020(@PathVariable String champion) {
         return this.championRepository.findByChampion(champion);
     }
 

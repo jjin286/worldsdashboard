@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class Champion2021Controller {
 
-    private ChampionRepository2021 championRepository;
+    private ChampionRepository2021 championRepository2021;
 
     public Champion2021Controller(ChampionRepository2021 championRepository) {
-        this.championRepository = championRepository;
+        this.championRepository2021 = championRepository;
     }
 
     @GetMapping("/champion/2021/{champion}")
     public Champion2021 getChampion(@PathVariable String champion) {
-        return this.championRepository.findByChampion(champion);
+        return this.championRepository2021.findByChampion(champion);
     }
 
 

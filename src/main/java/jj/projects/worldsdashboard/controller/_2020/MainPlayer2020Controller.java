@@ -13,8 +13,8 @@ import jj.projects.worldsdashboard.repository._2020.MainPlayerRepository2020;
 public class MainPlayer2020Controller {
     private MainPlayerRepository2020 mainPlayerRepository2020;
 
-    public MainPlayer2020Controller(MainPlayerRepository2020 mainPlayerRepository2020){
-        this.mainPlayerRepository2020 = mainPlayerRepository2020;
+    public MainPlayer2020Controller(MainPlayerRepository2020 mainPlayerRepository){
+        this.mainPlayerRepository2020 = mainPlayerRepository;
     }
 
     @GetMapping("/mainPlayer/2020/{mainplayer}")
