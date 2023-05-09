@@ -1,7 +1,8 @@
 package jj.projects.worldsdashboard.controller;
 
-import jj.projects.worldsdashboard.model.Champion;
-import jj.projects.worldsdashboard.repository.ChampionRepository;
+import jj.projects.worldsdashboard.model._2020.Champion2020;
+import jj.projects.worldsdashboard.repository._2020.ChampionRepository2020;
+
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,16 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
-public class ChampionController {
+public class Champion2020Controller {
 
-    private ChampionRepository championRepository;
+    private ChampionRepository2020 championRepository;
 
-    public ChampionController(ChampionRepository championRepository) {
+    public Champion2020Controller(ChampionRepository2020 championRepository) {
         this.championRepository = championRepository;
     }
 
-    @GetMapping("/champion/{champion}")
-    public Champion getChampion(@PathVariable String champion) {
+    @GetMapping("/champion/2020/{champion}")
+    public Champion2020 getChampion(@PathVariable String champion) {
         return this.championRepository.findByChampion(champion);
     }
 

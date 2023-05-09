@@ -1,17 +1,17 @@
-package jj.projects.worldsdashboard.data;
+package jj.projects.worldsdashboard.data._2022.Champion;
 
-import jj.projects.worldsdashboard.model.Champion;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jj.projects.worldsdashboard.model._2022.Champion2022;
+// import org.slf4j.Logger;
+// import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
 
-public class ChampionProcessor implements ItemProcessor<ChampionInput, Champion> {
+public class ChampionProcessor2022 implements ItemProcessor<ChampionInput2022, Champion2022> {
 
-    private static final Logger log = LoggerFactory.getLogger(ChampionProcessor.class);
+    // private static final Logger log = LoggerFactory.getLogger(ChampionProcessor2022.class);
 
     @Override
-    public Champion process(final ChampionInput championInput) throws Exception {
-        Champion champion = new Champion();
+    public Champion2022 process(final ChampionInput2022 championInput) throws Exception {
+        Champion2022 champion = new Champion2022();
         champion.setId(Integer.parseInt(championInput.getId()));
         champion.setChampion(championInput.getChampion());
         champion.setSumTotal(Integer.parseInt(championInput.getSum_total()));
@@ -31,7 +31,7 @@ public class ChampionProcessor implements ItemProcessor<ChampionInput, Champion>
         champion.setBanRate(championInput.getBan_rate());
         champion.setSumPickBan(Integer.parseInt(championInput.getSum_pick_ban()));
         champion.setPickBanRate(championInput.getPick_ban_rate());
-        log.info("Converting (" + championInput + ") into (" + champion + ")");
+        // log.info("Converting (" + championInput + ") into (" + champion + ")");
         return champion;
     }
 

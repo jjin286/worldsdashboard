@@ -1,6 +1,6 @@
-package jj.projects.worldsdashboard.data;
+package jj.projects.worldsdashboard.data._2020.Champion;
 
-public class ChampionInput {
+public class ChampionInput2020 {
     private String id;
     private String champion;
     private String sum_total;
@@ -16,12 +16,6 @@ public class ChampionInput {
     private String win_red_side;
     private String lose_red_side;
     private String winrate_red_side;
-    private String sum_bans;
-    private String ban_rate;
-    private String sum_pick_ban;
-    private String pick_ban_rate;
-
-
 
     public String getId() {
         return id;
@@ -143,35 +137,4 @@ public class ChampionInput {
         this.winrate_red_side = winrate_red_side;
     }
 
-    public String getSum_bans() {
-        return sum_bans;
-    }
-
-    public void setSum_bans(String sum_bans) {
-        this.sum_bans = sum_bans;
-    }
-
-    public String getBan_rate() {
-        return ban_rate;
-    }
-
-    public void setBan_rate(String ban_rate) {
-        this.ban_rate = ban_rate;
-    }
-
-    public String getSum_pick_ban() {
-        return sum_pick_ban;
-    }
-
-    public void setSum_pick_ban(String sum_pick_ban) {
-        this.sum_pick_ban = sum_pick_ban;
-    }
-
-    public String getPick_ban_rate() {
-        return pick_ban_rate;
-    }
-
-    public void setPick_ban_rate(String pick_ban_rate) {
-        this.pick_ban_rate = pick_ban_rate;
-    }
 }

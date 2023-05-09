@@ -1,18 +1,18 @@
-package jj.projects.worldsdashboard.model;
+package jj.projects.worldsdashboard.model._2020;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Champion {
+public class Champion2020 {
     @Id
     private int id;
     private String champion;
     private int sumTotal;
     private int winTotal;
     private int loseTotal;
-    private String winrateTotal;
     private String pickRate;
+    private String winrateTotal;
     private int sumBlueSide;
     private int winBlueSide;
     private int loseBlueSide;
@@ -21,11 +21,6 @@ public class Champion {
     private int winRedSide;
     private int loseRedSide;
     private String winrateRedSide;
-    private int sumBans;
-    private String banRate;
-    private int sumPickBan;
-    private String pickBanRate;
-
 
     public int getId() {
         return id;
@@ -147,38 +142,6 @@ public class Champion {
         this.winrateRedSide = winrateRedSide;
     }
 
-    public int getSumBans() {
-        return sumBans;
-    }
-
-    public void setSumBans(int sumBans) {
-        this.sumBans = sumBans;
-    }
-
-    public String getBanRate() {
-        return banRate;
-    }
-
-    public void setBanRate(String banRate) {
-        this.banRate = banRate;
-    }
-
-    public int getSumPickBan() {
-        return sumPickBan;
-    }
-
-    public void setSumPickBan(int sumPickBan) {
-        this.sumPickBan = sumPickBan;
-    }
-
-    public String getPickBanRate() {
-        return pickBanRate;
-    }
-
-    public void setPickBanRate(String pickBanRate) {
-        this.pickBanRate = pickBanRate;
-    }
-
     @Override
     public String toString() {
         return "Champion{" +
@@ -197,14 +160,10 @@ public class Champion {
                 ", winRedSide=" + winRedSide +
                 ", loseRedSide=" + loseRedSide +
                 ", winrateRedSide='" + winrateRedSide + '\'' +
-                ", sumBans=" + sumBans +
-                ", banRate='" + banRate + '\'' +
-                ", sumPickBan=" + sumPickBan +
-                ", pickBanRate='" + pickBanRate + '\'' +
                 '}';
     }
 
-    public Champion(){
+    public Champion2020(){
 
     }
 }

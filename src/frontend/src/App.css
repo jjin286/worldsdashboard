@@ -1,6 +1,37 @@
 .App {
-  text-align: left;
-  padding: 20px;
+  background-color: darkcyan;
 }
 
+.ChampionPage {
+  background-color: aqua;
+  height: 100vh;
+  text-align: center;
+  width: 60%;
+  padding: auto;
+  margin: auto;
+}
 
+.ChampionLargeCard {
+  background-color: rgb(138, 205, 214);
+  border: 1px solid black;
+  width: 50%;
+}
+
+.ChampionLargeCard .card-body{
+  background-color: khaki;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.ChampionSmallCard .card-body{
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.blueSide {
+  background-color: aqua;
+}
+
+.redSide {
+  background-color: lightcoral;
+}
