@@ -1,4 +1,4 @@
-package jj.projects.worldsdashboard.controller;
+package jj.projects.worldsdashboard.controller._2020;
 
 import jj.projects.worldsdashboard.model._2020.Champion2020;
 import jj.projects.worldsdashboard.repository._2020.ChampionRepository2020;
