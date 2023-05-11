@@ -1,26 +1,44 @@
 import { React } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { CircularProgressbar} from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 export const ChampionLargeCard = ({champion}) => {
+  const winrate = champion.winrateTotal.slice(0, -1);
+  const pickrate = champion.pickRate.slice(0, -1);
+  const banrate = champion.banRate.slice(0, -1);
+  const pickbanrate = champion.pickBanRate.slice(0, -1);
   return (
     <div className="ChampionLargeCard">
-      <div className="d-flex flex-row card">
-        <div className='card-body'>
-          <h3>Pick Count: {champion.sumTotal}</h3>
+      <div className="d-flex flex-row justify-content-center ">
+        <div className='stat-box col-2 fs-5 '>
+          <p>Winrate </p>
+          <CircularProgressbar value={winrate} text={`${winrate}%`} />
         </div>
-        <div className='card-body'>
-          <h3>Winrate: {champion.winrateTotal}</h3>
+        <div className='stat-box col-2 fs-5'>
+          <p>Pickrate</p>
+          <CircularProgressbar value={pickrate} text={`${pickrate}%`} />
         </div>
-        <div className='card-body'>
-          <h3>Pickrate: {champion.pickRate}</h3>
+        <div className='stat-box col-2 fs-5'>
+          <p>Banrate</p>
+          <CircularProgressbar value={banrate} text={`${banrate}%`} />
         </div>
-        <div className='card-body'>
-          <h3>Banrate: {champion.banRate}</h3>
-        </div>
-        <div className='card-body'>
-          <h3>Pick/Ban Pressence: {champion.pickBanRate}</h3>
+        <div className='stat-box col-2 fs-5'>
+          <p>Pick/Ban</p>
+          <CircularProgressbar value={pickbanrate} text={`${pickbanrate}%`} />
         </div>
       </div>
+      <div className='d-flex flex-row'>
+          <div className='stat-box col fs-5'>
+            <p>Total pick/ban <br/> {champion.sumPickBan}</p>
+          </div> 
+          <div className='stat-box col fs-5'>
+            <p>Total bans <br/> {champion.sumBans}</p>
+          </div>
+          <div className='stat-box col fs-5 '>
+            <p>Pick Count <br/> {champion.sumTotal}</p>
+          </div>
+        </div>
     </div>
   );
 }

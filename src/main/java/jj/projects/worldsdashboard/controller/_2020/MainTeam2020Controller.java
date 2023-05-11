@@ -22,5 +22,7 @@ public class MainTeam2020Controller {
     public MainTeam2020 getMainTeam2020(@PathVariable String team) {
         return mainTeamRepository2020.findByTeam(team);
     }
+
+    
     
 }

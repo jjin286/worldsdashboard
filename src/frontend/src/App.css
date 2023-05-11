@@ -3,24 +3,19 @@
 }
 
 .ChampionPage {
-  background-color: aqua;
+  background-color: #060e1f;
+  color: white;
   height: 100vh;
   text-align: center;
-  width: 60%;
-  padding: auto;
-  margin: auto;
 }
 
-.ChampionLargeCard {
-  background-color: rgb(138, 205, 214);
-  border: 1px solid black;
-  width: 50%;
-}
-
-.ChampionLargeCard .card-body{
-  background-color: khaki;
-  border-radius: 5px;
-  margin: 5px;
+.stat-box {
+  background-color: rgb(19, 14, 57);
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 8px;
+  text-justify: auto;
 }
 
 .ChampionSmallCard .card-body{
@@ -34,4 +29,22 @@
 
 .redSide {
   background-color: lightcoral;
+}
+
+.fit-image-right {
+  padding: 5px;
+  width: 520px;
+  height: 700px;
+  object-fit: none;
+  object-position: 90% 90%;
+  border-radius: 20px;
+}
+
+.stats {
+  background-color: #060e1f;
+  padding: 30px;
+}
+
+h1 {
+  padding: 25px 0px 25px 0px;
 }
