@@ -7,7 +7,7 @@ import '../App.css'
 export const SideBar = ({year}) => {
    
     return (
-      <div className='container-fluid'>
+      <div className='container-fluid sticky'>
         <div className='row'>
           <div className='sidebar bg-dark min-vh-100 d-flex justify-content-between flex-column'>
             <div>
@@ -51,35 +51,5 @@ export const SideBar = ({year}) => {
           </div>
         </div>
       </div>
-    //     <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial'}}>
-    //   <CDBSidebar className='sidebar' textColor="#fff" backgroundColor="#333">
-    //     <CDBSidebarHeader>
-    //       <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
-    //         <img src={process.env.PUBLIC_URL + 'icons8-league-of-legends-32.png'} />
-    //         Sidebar
-    //       </a>
-    //     </CDBSidebarHeader>
-
-    //     <CDBSidebarContent className="sidebar-content">
-    //       <CDBSidebarMenu>
-    //         <NavLink exact to="/" activeClassName="activeClicked">
-    //           <CDBSidebarMenuItem icon="reddit">Main Stage Teams</CDBSidebarMenuItem>
-    //         </NavLink>
-    //         <NavLink exact to="/tables" activeClassName="activeClicked">
-    //           <CDBSidebarMenuItem icon="table">Main Stage Players</CDBSidebarMenuItem>
-    //         </NavLink>
-    //         <NavLink exact to="/profile" activeClassName="activeClicked">
-    //           <CDBSidebarMenuItem icon="user">Play In Teams</CDBSidebarMenuItem>
-    //         </NavLink>
-    //         <NavLink exact to="/analytics" activeClassName="activeClicked">
-    //           <CDBSidebarMenuItem icon="chart-line">Play In Players</CDBSidebarMenuItem>
-    //         </NavLink>
-    //         <NavLink exact to="/analytics" activeClassName="activeClicked">
-    //           <CDBSidebarMenuItem icon="chart-line">Champions</CDBSidebarMenuItem>
-    //         </NavLink>
-    //       </CDBSidebarMenu>
-    //     </CDBSidebarContent>
-    //   </CDBSidebar>
-    // </div>
     );
 }

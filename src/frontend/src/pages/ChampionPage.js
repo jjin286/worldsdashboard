@@ -17,7 +17,7 @@ export const ChampionPage = () => {
         setChampion(data);
       };
       fetchChampion();
-    }, []
+    }, [year]
   );
 
   if(!champion || !champion.champion){
@@ -27,16 +27,16 @@ export const ChampionPage = () => {
     <div className="ChampionPage">
       <div id='container'>
         <div className='row g-0'>
-          <div className='col-2'>
+          <div className='col'>
             <SideBar year={year}/>
           </div>
           
           <div className='col-10'>
-          <WorldsNavbar />
+            <WorldsNavbar />
             <div className='row g-0'>
               <div className='ps-5 col-4'>
                 <h1>{champion.champion}</h1>
-                <img className='fit-image-right' src={require('../championImages/miss fortune.jpeg')}/>
+                <img className='fit-image-right' src={"/championImages/" + champion.champion + ".jpeg"} />
               </div>
               <div className='col-1'></div>
               <div className='stats col-6'>

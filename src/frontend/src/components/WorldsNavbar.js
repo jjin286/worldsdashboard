@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export const WorldsNavbar = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar className='container-fluid sticky-top' bg="dark" variant="dark" >
         <Container>
           <Navbar.Brand href="#home">Worlds Statistics</Navbar.Brand>
           <Nav className="me-auto">
@@ -15,5 +15,6 @@ export const WorldsNavbar = () => {
           </Nav>
         </Container>
     </Navbar>
+    
   );
 }
