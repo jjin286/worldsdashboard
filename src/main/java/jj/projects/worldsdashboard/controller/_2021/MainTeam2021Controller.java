@@ -1,5 +1,7 @@
 package jj.projects.worldsdashboard.controller._2021;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,17 +12,22 @@ import jj.projects.worldsdashboard.repository._2021.MainTeamRepository2021;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = { "*" })
 public class MainTeam2021Controller {
-    private MainTeamRepository2021 mainTeamRepository2021;
+    private MainTeamRepository2021 mainTeamRepository;
 
     public MainTeam2021Controller(MainTeamRepository2021 mainTeamRepository){
-        this.mainTeamRepository2021 = mainTeamRepository;
+        this.mainTeamRepository = mainTeamRepository;
     }
 
-    @GetMapping(value="/mainTeam/2021/{team}")
+    @GetMapping("/2021/mainTeam")
+    public List<MainTeam2021> getAllMainTeam2021() {
+        return this.mainTeamRepository.findAll();
+    }
+
+    @GetMapping(value="/2021/mainTeam/{team}")
     public MainTeam2021 getMainTeam2021(@PathVariable String team) {
-        return mainTeamRepository2021.findByTeam(team);
+        return mainTeamRepository.findByTeam(team);
     }
     
 }

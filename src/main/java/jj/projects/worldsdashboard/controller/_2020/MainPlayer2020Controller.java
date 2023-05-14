@@ -11,21 +11,26 @@ import jj.projects.worldsdashboard.model._2020.MainPlayer2020;
 import jj.projects.worldsdashboard.repository._2020.MainPlayerRepository2020;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = { "*" })
 public class MainPlayer2020Controller {
-    private MainPlayerRepository2020 mainPlayerRepository2020;
+    private MainPlayerRepository2020 mainPlayerRepository;
 
     public MainPlayer2020Controller(MainPlayerRepository2020 mainPlayerRepository){
-        this.mainPlayerRepository2020 = mainPlayerRepository;
+        this.mainPlayerRepository = mainPlayerRepository;
     }
 
-    @GetMapping("/mainPlayer/2020/{mainplayer}")
+    @GetMapping("/2020/mainPlayer")
+    public List<MainPlayer2020> getAllMainPlayer2020() {
+        return this.mainPlayerRepository.findAll();
+    }
+
+    @GetMapping("/2020/mainPlayer/{mainplayer}")
     public MainPlayer2020 getMainPlayer2020(@PathVariable String mainplayer) {
-        return this.mainPlayerRepository2020.findByPlayer(mainplayer);
+        return this.mainPlayerRepository.findByPlayer(mainplayer);
     }
 
-    @GetMapping("/team/2020/{team}/players")
+    @GetMapping("/2020/team/{team}/players")
     public List<MainPlayer2020> getMainPlayer2020FromTeam(@PathVariable String team) {
-        return this.mainPlayerRepository2020.getByTeam(team);
+        return this.mainPlayerRepository.getByTeam(team);
     }
 }

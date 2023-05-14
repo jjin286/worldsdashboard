@@ -12,7 +12,7 @@ export const ChampionPage = () => {
   useEffect(
     () => {
       const fetchChampion = async () => {
-        const response = await fetch(`http://localhost:8080/champion/${year}/${championName}`);
+        const response = await fetch(`http://localhost:8080/${year}/champion/${championName}`);
         const data = await response.json();
         setChampion(data);
       };
@@ -21,7 +21,19 @@ export const ChampionPage = () => {
   );
 
   if(!champion || !champion.champion){
-    return <h1>Champion not found</h1>
+    return (
+      <div className="ChampionPage" style={{backgroundColor: 'rgb(23,23,23)', overflow: 'hidden'}}>
+          <div className='row g-0'>
+              <div className='col'>
+                  <SideBar year={year}/>
+              </div>
+              <div className='col-10'>
+                  <WorldsNavbar /> 
+                  <h1 style={{ color: 'white', paddingLeft : '20px'}}>Champion not found</h1>
+              </div>
+          </div>
+      </div>
+      );  
   }
   return (
     <div className="ChampionPage">

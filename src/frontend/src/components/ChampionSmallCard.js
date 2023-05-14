@@ -5,6 +5,7 @@ import 'react-circular-progressbar/dist/styles.css';
 export const ChampionSmallCard = ({champion}) => {
   const bluewinrate = champion.winrateBlueSide.slice(0,-1);
   const redwinrate = champion.winrateRedSide.slice(0,-1);
+  
   return (
     <div className="ChampionSmallCard">
       <div className='row'>

@@ -11,23 +11,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = { "*" })
 public class Champion2021Controller {
 
-    private ChampionRepository2021 championRepository2021;
+    private ChampionRepository2021 championRepository;
 
     public Champion2021Controller(ChampionRepository2021 championRepository) {
-        this.championRepository2021 = championRepository;
+        this.championRepository = championRepository;
     }
 
-    @GetMapping("/champion/2021/")
+    @GetMapping("/2021/champion")
     public List<Champion2021> getAllChampion2021() {
-        return this.championRepository2021.findAll();
+        return this.championRepository.findAll();
     }
     
-    @GetMapping("/champion/2021/{champion}")
+    @GetMapping("/2021/champion/{champion}")
     public Champion2021 getChampion(@PathVariable String champion) {
-        return this.championRepository2021.findByChampion(champion);
+        return this.championRepository.findByChampion(champion);
     }
 
     

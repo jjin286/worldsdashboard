@@ -1,5 +1,24 @@
 package jj.projects.worldsdashboard.data;
 
+import javax.sql.DataSource;
+
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.Step;
+import org.springframework.batch.core.job.builder.JobBuilder;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.batch.core.repository.JobRepository;
+import org.springframework.batch.core.step.builder.StepBuilder;
+import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
+import org.springframework.batch.item.database.JdbcBatchItemWriter;
+import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
+import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.transaction.PlatformTransactionManager;
+
 import jj.projects.worldsdashboard.data._2020.Champion.ChampionInput2020;
 import jj.projects.worldsdashboard.data._2020.Champion.ChampionProcessor2020;
 import jj.projects.worldsdashboard.data._2020.MainPlayer.MainPlayerInput2020;
@@ -45,25 +64,6 @@ import jj.projects.worldsdashboard.model._2022.MainPlayer2022;
 import jj.projects.worldsdashboard.model._2022.MainTeam2022;
 import jj.projects.worldsdashboard.model._2022.PlayInPlayer2022;
 import jj.projects.worldsdashboard.model._2022.PlayInTeam2022;
-
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.Step;
-import org.springframework.batch.core.job.builder.JobBuilder;
-import org.springframework.batch.core.launch.support.RunIdIncrementer;
-import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.batch.core.step.builder.StepBuilder;
-import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
-import org.springframework.batch.item.database.JdbcBatchItemWriter;
-import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
-import org.springframework.batch.item.file.FlatFileItemReader;
-import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
-import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.transaction.PlatformTransactionManager;
-
-import javax.sql.DataSource;
 
 @Configuration
 public class BatchConfiguration {
@@ -243,7 +243,7 @@ public class BatchConfiguration {
     public FlatFileItemReader<PlayInPlayerInput2020> playInPlayerReader2020() {
         return new FlatFileItemReaderBuilder<PlayInPlayerInput2020>()
                 .name("mainPlayerReader")
-                .resource(new ClassPathResource("Worlds Data/Worlds 2020/wc_players_main.csv"))
+                .resource(new ClassPathResource("Worlds Data/Worlds 2020/wc_players_play_in.csv"))
                 .delimited()
                 .names(new String[]{"player","team","position","gold_per_minute","winrate","counter_pickrate","kills","deaths","assists","kda","kp","kill_share","share_team_deaths","first_blood_rate","gold_diff10","xp_diff10","cs_diff10","cspm","share_team_deaths15","damage_per_minute","share_damage","share_team_damage15","average_gold_per_minute","gold_share","neutral_objective_stolen","wards_per_minute","control_wards_per_minute","wards_cleared_per_minute"    
                 })
@@ -416,8 +416,8 @@ public class BatchConfiguration {
     @Bean
     public FlatFileItemReader<PlayInPlayerInput2021> playInPlayerReader2021() {
         return new FlatFileItemReaderBuilder<PlayInPlayerInput2021>()
-                .name("mainPlayerReader")
-                .resource(new ClassPathResource("Worlds Data/Worlds 2021/wc_players_main.csv"))
+                .name("playInPlayerReader")
+                .resource(new ClassPathResource("Worlds Data/Worlds 2021/wc_players_play_in.csv"))
                 .delimited()
                 .names(new String[]{"player","team","position","gold_per_minute","winrate","counter_pickrate","kills","deaths","assists","kda","kp","kill_share","share_team_deaths","first_blood_rate","gold_diff10","xp_diff10","cs_diff10","cspm","share_team_deaths15","damage_per_minute","share_damage","share_team_damage15","average_gold_per_minute","gold_share","neutral_objective_stolen","wards_per_minute","control_wards_per_minute","wards_cleared_per_minute"    
                 })
@@ -589,8 +589,8 @@ public class BatchConfiguration {
     @Bean
     public FlatFileItemReader<PlayInPlayerInput2022> playInPlayerReader2022() {
         return new FlatFileItemReaderBuilder<PlayInPlayerInput2022>()
-                .name("mainPlayerReader")
-                .resource(new ClassPathResource("Worlds Data/Worlds 2022/wc_players_main.csv"))
+                .name("playInPlayerReader")
+                .resource(new ClassPathResource("Worlds Data/Worlds 2022/wc_players_play_in.csv"))
                 .delimited()
                 .names(new String[]{"player","team","position","gold_per_minute","winrate","counter_pickrate","kills","deaths","assists","kda","kp","kill_share","share_team_deaths","first_blood_rate","gold_diff10","xp_diff10","cs_diff10","cspm","share_team_deaths15","damage_per_minute","share_damage","share_team_damage15","average_gold_per_minute","gold_share","neutral_objective_stolen","wards_per_minute","control_wards_per_minute","wards_cleared_per_minute"    
                 })
@@ -737,4 +737,5 @@ public class BatchConfiguration {
                 .next(step15)
                 .build();
     }
+
 }
