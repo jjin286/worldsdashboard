@@ -11,19 +11,20 @@ export const SideBar = ({year}) => {
         <div className='row'>
           <div className='sidebar bg-dark min-vh-100 d-flex justify-content-between flex-column'>
             <div>
-              <a className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>
+              <a href={`http://localhost:3000`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>
+                <img style={{marginTop: '5px', marginLeft: '5px'}} src={`/images/Worldslogo.png`} width='28' height='28'/>
                 <span className='ms-1 fs-4'>Worlds Statistics</span>
               </a>
               <hr className="text-secondary" />
               <ul className="nav nav-pills flex-column">
                 <li className="nav-item">
-                  <a href={`http://localhost:3000/${year}/champion`} className="nav-link text-white fs-5" aria-current="page">
+                  <a href={`http://localhost:3000/${year}/team/mainTeam`} className="nav-link text-white fs-5" aria-current="page">
                     <i className="bi bi-people-fill"></i>
                     <span className="ms-2">Main Stage Teams</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href={`http://localhost:3000/${year}/champion`} className="nav-link text-white fs-5" aria-current="page">
+                  <a href={`http://localhost:3000/${year}/team/playInTeam`} className="nav-link text-white fs-5" aria-current="page">
                     <i className="bi bi-people"></i>
                     <span className="ms-2">Play-In Stage Teams</span>
                   </a>

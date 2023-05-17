@@ -8,6 +8,7 @@ import { SideBar } from '../components/SideBar';
 export const ChampionPage = () => {
 
   const [champion, setChampion] = useState({});
+  const [image, setImage] = useState({});
   const { championName, year } = useParams();
   useEffect(
     () => {
@@ -19,6 +20,15 @@ export const ChampionPage = () => {
       fetchChampion();
     }, [year]
   );
+
+  const checkPath = () => {
+    try{
+      return require(`./../../championImages/Miss Fortune.jpeg`)
+
+    } catch(e) {
+      console.log(e);
+    }  
+  }
 
   if(!champion || !champion.champion){
     return (
@@ -48,7 +58,9 @@ export const ChampionPage = () => {
             <div className='row g-0'>
               <div className='ps-5 col-4'>
                 <h1>{champion.champion}</h1>
-                <img className='fit-image-right' src={"/championImages/" + champion.champion + ".jpeg"} />
+                <img className='fit-image-right' src={"/championImages/" + champion.champion + "_right.jpg"}  onError={(event) => event.target.style.display = 'none'}/>
+                <img className='fit-image-middle' src={"/championImages/" + champion.champion + "_middle.jpg"}  onError={(event) => event.target.style.display = 'none'}/>
+                <img className='fit-image-center' src={"/championImages/" + champion.champion + "_center.jpg"}  onError={(event) => event.target.style.display = 'none'}/>
               </div>
               <div className='col-1'></div>
               <div className='stats col-6'>
@@ -65,3 +77,4 @@ export const ChampionPage = () => {
 }
 
 
+{/* <img className='fit-image-right' src={"/championImages/" + champion.champion + ".jpeg"} />  */}

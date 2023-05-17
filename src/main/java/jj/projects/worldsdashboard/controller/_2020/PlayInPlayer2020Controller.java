@@ -30,4 +30,8 @@ public class PlayInPlayer2020Controller {
         return this.playInPlayerRepository.findByPlayer(player);
     }
     
+    @GetMapping(value="/2020/playInPlayer/findByTeam/{team}")
+    public List<PlayInPlayer2020> getPlayersByTeam(@PathVariable String team) {
+        return this.playInPlayerRepository.findByTeam(team);
+    }
 }

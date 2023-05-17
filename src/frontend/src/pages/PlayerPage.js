@@ -7,12 +7,13 @@ import { PlayerStatCard } from '../components/PlayerStatCard';
 
 export const PlayerPage = () => {
     const [player, setPlayer] = useState({});
-    const { year, playerName } = useParams();
+    const { year, playerName, playerType } = useParams();
+    
     useEffect(
         () => {
             const fetchPlayer = async () =>{
-                console.log(`http://localhost:8080/${year}/mainPlayer/${playerName}`);
-                const response = await fetch(`http://localhost:8080/${year}/mainPlayer/${playerName}`);
+                console.log(`http://localhost:8080/${year}/${playerType}/${playerName}`);
+                const response = await fetch(`http://localhost:8080/${year}/${playerType}/${playerName}`);
                 const data = await response.json();
                 setPlayer(data);
                 console.log(player);

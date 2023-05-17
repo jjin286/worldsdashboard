@@ -1,6 +1,8 @@
 
+
 .App {
   background-color: #31313C;
+  /* font-family: Beaufort; */
 }
 
 .ChampionPage {
@@ -37,9 +39,28 @@
   width: 520px;
   height: 700px;
   object-fit: none;
-  object-position: 90% 90%;
+  object-position: 90% 100%;
   border-radius: 20px;
 }
+
+.fit-image-middle {
+  padding: 5px;
+  width: 520px;
+  height: 700px;
+  object-fit: none;
+  object-position: 70% 100%;
+  border-radius: 20px;
+}
+
+.fit-image-center {
+  padding: 5px;
+  width: 520px;
+  height: 700px;
+  object-fit: none;
+  object-position: 50% 100%;
+  border-radius: 20px;
+}
+
 
 .stats {
   background-color: #060e1f;
@@ -138,3 +159,91 @@ table tr:last-child td:last-child {
 .navbar {
   margin-bottom: 50px;
 }
+
+
+/* Scrolling Images */
+
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#topBar {
+  width: 100%;
+  text-align: center; 
+  background-color: rgb(35, 35, 35); 
+  margin-bottom: 0;
+}
+
+.no-parallax {
+  background-color: #111;
+  z-index: 999;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 2rem;
+  /* font-family: 'Beaufort'; */
+}
+
+.parallax h1 {
+  width: 60%;
+  font-size: 8rem;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg1::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("~/public/images/worldstrophy.jpeg");
+  background-size: cover;
+}
+
+.bg2::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("~/public/images/worlds2020.jpeg");
+  background-size: cover;
+}
+
+.bg3::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("~/public/images/worlds2021.jpeg");
+  background-size: cover;
+}
+
+.bg4::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("~/public/images/worlds2022.jpeg");
+  background-size: cover;
+}
+
+/* @media screen and (min-width: 768px) {
+  section h1 {
+    font-size: 8rem;
+  }
+  .parallax h1 {
+    font-size: 4rem;
+  }
+} */

@@ -71,6 +71,7 @@ export const AllChampionPage = () => {
             </div>
             <div className='col-10'>
                 <WorldsNavbar pagePath={pagePath}/>
+                <h1 style={{ color: 'white', padding: '0 0 0 50px'}}>{year} Champions</h1>
                 <div className="championTable p-5">
                     <table>
                         <thead className="rounded-top" style={{background:'#282830', borderCollapse: 'collapse', borderRadius:10}}>

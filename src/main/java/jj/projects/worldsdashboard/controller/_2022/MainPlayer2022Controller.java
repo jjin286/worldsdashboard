@@ -28,4 +28,9 @@ public class MainPlayer2022Controller {
     public MainPlayer2022 getMainPlayer2022(@PathVariable String mainplayer) {
         return this.mainPlayerRepository.findByPlayer(mainplayer);
     }
+
+    @GetMapping(value="/2022/mainPlayer/findByTeam/{team}")
+    public List<MainPlayer2022> getPlayersByTeam(@PathVariable String team) {
+        return this.mainPlayerRepository.findByTeam(team);
+    }
 }

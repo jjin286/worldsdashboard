@@ -3,19 +3,22 @@ import { PlayerStatCard } from './PlayerStatCard';
 
 export const PlayerCard = ({player, year}) => {
     const winrate = player.winrate?.slice(0, -1);
-    const gamesWon = player.goldPerMinute * winrate / 100;
-    const gamesLost = player.goldPerMinute - gamesWon;
+    const gamesWon = Math.round(player.goldPerMinute * winrate / 100);
+    const gamesLost = Math.round(player.goldPerMinute - gamesWon);
 
     return(
         <div className='container'>
             <div className='playerCard row'>
                 <div className='col-2'>
-                    <img src={`/playerImages/${player.player}_${year}.jpeg`} width="235" height="180"/>
+                    <img src={`/playerImages/${player.player}${year}.png`} width="235" height="180"/>
                 </div>
                 <div className='col-3'>
                     {/* <hr style={{width: '1px', height: '20px', display: 'inline-block'}}/>    */}
                     <div style={{marginLeft: '50px'}}>
                         <h1 style={{ color: "white" }}>{player.player}</h1>
+                        {
+
+                        }
                         <h3><img src={`/images/${player.position}.svg`}/> {player.position}</h3>
                         <h3>{player.team}</h3>
                     </div>
@@ -29,7 +32,7 @@ export const PlayerCard = ({player, year}) => {
                     <h9 style={{ paddingLeft : '5px'}}>{player.kda} KDA</h9>  
                 </div>
                 <div className='col-2'>
-                    <img src={`/teamLogos/${player.team}logo.jpeg`} width="235" height="180"/>
+                    <img src={`/teamLogos/${player.team}.png`} width="200" height="200"/>
                 </div>
             </div>         
         </div>
