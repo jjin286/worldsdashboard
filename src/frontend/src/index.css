@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'Beaufort';
-  src: local('Beaufort'), url(./fonts/beaufort-for-lol/BeaufortforLOL-Regular.ttf) format('ttf');
-}
+
 
 body {
   margin: 0;
