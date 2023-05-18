@@ -103,7 +103,7 @@ export const AllTeam = () => {
                                     <tr>
                                         <td>
                                             {/* <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={"http://localhost:3000/" + year + "/champion/" + champ.champion}> */}
-                                            <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={`/${year}/team/${teamType}/${teams.team}`}>
+                                            <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={`${window.location.protocol}${window.location.hostname}/${year}/team/${teamType}/${teams.team}`}>
                                                 <img src={`/teamLogos/${teams.team}.png`} width="32" height="32" alt=""/>
                                                 {teams.team}
                                             </a>
