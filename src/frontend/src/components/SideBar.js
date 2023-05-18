@@ -21,14 +21,14 @@ export const SideBar = ({year}) => {
                 <li className="nav-item">
                   <Link to={`/${year}/team/mainTeam`}>
                     <i className="bi bi-people-fill"></i>
-                    <span className="ms-2">Main Stage Teams</span>
+                    <span className="ms-2 text-white fs-5">Main Stage Teams</span>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a href={`${window.location.protocol}${window.location.hostname}/${year}/team/playInTeam`} className="nav-link text-white fs-5" aria-current="page">
-                    <i className="bi bi-people"></i>
-                    <span className="ms-2">Play-In Stage Teams</span>
-                  </a>
+                  <Link to={`/${year}/team/playInTeam`}>
+                    <i className="bi bi-people-fill"></i>
+                    <span className="ms-2 text-white fs-5">Play-In Stage Teams</span>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a href={`${window.location.protocol}${window.location.hostname}/${year}/mainPlayer`} className="nav-link text-white fs-5" aria-current="page">
