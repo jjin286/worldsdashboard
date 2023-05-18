@@ -27,7 +27,7 @@ export const AllTeam = () => {
             }
 
             fetchTeams();
-        }, []
+        }, [teamType, teams, year]
     );
 
     useEffect(
@@ -47,7 +47,7 @@ export const AllTeam = () => {
             setTeams( 
                 sortBy.ascending ? sortedTeam : sortedTeam.reverse()
             );
-        }, [sortBy]
+        }, [teams, sortBy]
     );
 
     const onClickSort = (key, ascending) => {
@@ -104,7 +104,7 @@ export const AllTeam = () => {
                                         <td>
                                             {/* <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={"http://localhost:3000/" + year + "/champion/" + champ.champion}> */}
                                             <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={`http://localhost:3000/${year}/team/${teamType}/${teams.team}`}>
-                                                <img src={`/teamLogos/${teams.team}.png`} width="32" height="32"/>
+                                                <img src={`/teamLogos/${teams.team}.png`} width="32" height="32" alt=""/>
                                                 {teams.team}
                                             </a>
                                         </td>

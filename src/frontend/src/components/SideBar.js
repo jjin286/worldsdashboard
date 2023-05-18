@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../App.css'
@@ -12,7 +11,7 @@ export const SideBar = ({year}) => {
           <div className='sidebar bg-dark min-vh-100 d-flex justify-content-between flex-column'>
             <div>
               <a href={`http://localhost:3000`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>
-                <img style={{marginTop: '5px', marginLeft: '5px'}} src={`/images/Worldslogo.png`} width='28' height='28'/>
+                <img style={{marginTop: '5px', marginLeft: '5px'}} src={`/images/Worldslogo.png`} width='28' height='28' alt=""/>
                 <span className='ms-1 fs-4'>Worlds Statistics</span>
               </a>
               <hr className="text-secondary" />

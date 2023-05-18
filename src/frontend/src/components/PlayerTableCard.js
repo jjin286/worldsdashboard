@@ -34,14 +34,14 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                     <td>
                                         <div className='row'>
                                             <div className='col-9'>
-                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113"/>
+                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
                                                 ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
-                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32'/>
+                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32' alt=""/>
                                             </div>
                                         </div>
                                     </td>
@@ -64,14 +64,14 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                     <td>
                                         <div className='row'>
                                             <div className='col-9'>
-                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113"/>
+                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
                                                 ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
-                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32'/>
+                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32' alt=""/>
                                             </div>
                                         </div>
                                     </td>
@@ -94,14 +94,14 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                     <td>
                                         <div className='row'>
                                             <div className='col-9'>
-                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113"/>
+                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
                                                 ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
-                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32'/>
+                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32' alt=""/>
                                             </div>
                                         </div>
                                     </td>
@@ -124,14 +124,14 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                     <td>
                                         <div className='row'>
                                             <div className='col-9'>
-                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113"/>
+                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
                                                 ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
-                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32'/>
+                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32' alt=""/>
                                             </div>
                                         </div>
                                     </td>
@@ -154,14 +154,14 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                     <td>
                                         <div className='row'>
                                             <div className='col-9'>
-                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113"/>
+                                                <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
                                                 ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
-                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32'/>
+                                                <img style={{marginTop: '30px'}} src={`/images/${currentValue.position}.svg`} width='32' height='32' alt=""/>
                                             </div>
                                         </div>
                                     </td>

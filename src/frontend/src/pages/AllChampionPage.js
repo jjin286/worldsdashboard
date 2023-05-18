@@ -3,15 +3,13 @@ import { useParams } from 'react-router-dom';
 import { WorldsNavbar } from '../components/WorldsNavbar';
 import { SideBar } from '../components/SideBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { PlayerCard } from '../components/PlayerCard';
+
 
 export const AllChampionPage = () => {
 
   const [allChampion, setAllChampion] = useState([]);
-  const [player, setPlayer] = useState({});
   const [sortBy, setSortBy] = useState({field: "id", ascending: true});
   const { year } = useParams();
-  const [pagePath, setPagePath] = useState('http://localhost:3000/champion/');
 
     useEffect(
         () => {
@@ -20,19 +18,13 @@ export const AllChampionPage = () => {
             const response = await fetch(`http://localhost:8080/${year}/champion`);
             const data = await response.json();
             setAllChampion(data);
-            console.log("Path: " + pagePath);
-            console.log("Store: " + allChampion);
-        };
 
-        const fetchAllPlayer = async () => {
-            const playerResponse = await fetch(`http://localhost:8080/${year}/mainPlayer/369`);
-            const playerData = await playerResponse.json();
-            setPlayer(playerData);
+            console.log("Store: " + allChampion);
         };
         
         fetchAllChampion();
-        fetchAllPlayer();
-        }, [year]
+
+        }, [allChampion, year]
     );
 
     useEffect(
@@ -52,7 +44,7 @@ export const AllChampionPage = () => {
             setAllChampion( 
                 sortBy.ascending ? sortedChampion : sortedChampion.reverse()
             );
-        }, [sortBy]
+        }, [allChampion, sortBy]
     );
 
     const onClickSort = (key, ascending) => {
@@ -70,7 +62,7 @@ export const AllChampionPage = () => {
                 <SideBar year={year}/>
             </div>
             <div className='col-10'>
-                <WorldsNavbar pagePath={pagePath}/>
+                <WorldsNavbar />
                 <h1 style={{ color: 'white', padding: '0 0 0 50px'}}>{year} Champions</h1>
                 <div className="championTable p-5">
                     <table>
@@ -90,7 +82,7 @@ export const AllChampionPage = () => {
                                     <td>{champ.id}</td>
                                     <td>
                                         <a className="text-decoration-none" style={{color:'white'}} href={"http://localhost:3000/" + year + "/champion/" + champ.champion}>
-                                            <img src={"/championIcon/" + champ.champion + ".jpeg"} width="32" height="32"/>
+                                            <img src={"/championIcon/" + champ.champion + ".jpeg"} width="32" height="32" alt=""/>
                                             {champ.champion}
                                         </a>
                                     </td>

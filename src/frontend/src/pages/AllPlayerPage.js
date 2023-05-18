@@ -27,7 +27,7 @@ export const AllPlayerPage = () => {
             }
 
             fetchPlayers();
-        }, []
+        }, [playerType, players, year]
     );
 
     useEffect(
@@ -47,7 +47,7 @@ export const AllPlayerPage = () => {
             setPlayers( 
                 sortBy.ascending ? sortedPlayer : sortedPlayer.reverse()
             );
-        }, [sortBy]
+        }, [players, sortBy]
     );
 
     const onClickSort = (key, ascending) => {
@@ -103,19 +103,19 @@ export const AllPlayerPage = () => {
                                         <td>
                                             {/* <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={"http://localhost:3000/" + year + "/champion/" + champ.champion}> */}
                                             <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={"http://localhost:3000/" + year + "/" + playerType + "/" + player.player}>
-                                                <img src={`/playerImages/${player.player}${year}.png`} width="40" height="30"/>
+                                                <img src={`/playerImages/${player.player}${year}.png`} width="40" height="30" alt=""/>
                                                 {player.player}
                                             </a>
                                         </td>
                                         <td>
                                             {playerType === "mainPlayer" ? 
                                             <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={"http://localhost:3000/" + year + "/team/mainTeam/" + player.team}>
-                                                <img src={`/teamLogos/${player.team}.png`} width="32" height="32"/>
+                                                <img src={`/teamLogos/${player.team}.png`} width="32" height="32" alt=""/>
                                                 {player.team}
                                             </a>
                                             :
                                             <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={"http://localhost:3000/" + year + "/team/playInTeam/" + player.team}>
-                                                <img src={`/teamLogos/${player.team}.png`} width="32" height="32"/>
+                                                <img src={`/teamLogos/${player.team}.png`} width="32" height="32" alt=""/>
                                                 {player.team}
                                             </a>}
                                             </td>

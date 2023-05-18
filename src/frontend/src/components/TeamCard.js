@@ -9,7 +9,7 @@ export const TeamCard = ({team, year}) => {
         <div className='container'>
             <div style={{marginBottom: '12px'}} className='playerCard row'>
                 <div className='col-2'>
-                    <img src={`/teamLogos/${team.team}.png`} width="200" height="200"/>
+                    <img src={`/teamLogos/${team.team}.png`} width="200" height="200" alt=""/>
                 </div>
                 <div className='col-3'></div>
                 <div className='col-4'>
