@@ -20,7 +20,7 @@ export const AllTeam = () => {
     useEffect(
         () => {
             const fetchTeams = async () => {
-                const response = await fetch(`http://localhost:8080/${year}/${teamType}`);
+                const response = await fetch(`https://worldsstatistics-backend.herokuapp.com/${year}/${teamType}`);
                 const data = await response.json();
                 setTeams(data);
                 console.log(teams);
@@ -103,7 +103,7 @@ export const AllTeam = () => {
                                     <tr>
                                         <td>
                                             {/* <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={"http://localhost:3000/" + year + "/champion/" + champ.champion}> */}
-                                            <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={`http://localhost:3000/${year}/team/${teamType}/${teams.team}`}>
+                                            <a className="text-decoration-none" style={{color:'#9E9EB1'}} href={`/${year}/team/${teamType}/${teams.team}`}>
                                                 <img src={`/teamLogos/${teams.team}.png`} width="32" height="32" alt=""/>
                                                 {teams.team}
                                             </a>

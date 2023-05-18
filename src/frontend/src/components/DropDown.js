@@ -16,11 +16,11 @@ export const DropDown = ({year}) => {
               size='lg'
               menuVariant="dark"
             >
-              <NavDropdown.Item href={`http://localhost:3000/${year}/team/mainTeam`}>Main Stage Teams</NavDropdown.Item>
-              <NavDropdown.Item href={`http://localhost:3000/${year}/mainPlayer`}>Main Stage Players</NavDropdown.Item>
-              <NavDropdown.Item href={`http://localhost:3000/${year}/team/playInTeam`}>Play-In Stage Teams</NavDropdown.Item>
-              <NavDropdown.Item href={`http://localhost:3000/${year}/playInPlayer`}>Play-In Stage Players</NavDropdown.Item>
-              <NavDropdown.Item href={`http://localhost:3000/${year}/champion`}>Champions</NavDropdown.Item>
+              <NavDropdown.Item href={`/${year}/team/mainTeam`}>Main Stage Teams</NavDropdown.Item>
+              <NavDropdown.Item href={`/${year}/mainPlayer`}>Main Stage Players</NavDropdown.Item>
+              <NavDropdown.Item href={`/${year}/team/playInTeam`}>Play-In Stage Teams</NavDropdown.Item>
+              <NavDropdown.Item href={`/${year}/playInPlayer`}>Play-In Stage Players</NavDropdown.Item>
+              <NavDropdown.Item href={`/${year}/champion`}>Champions</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

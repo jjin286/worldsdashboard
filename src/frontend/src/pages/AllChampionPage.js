@@ -15,7 +15,7 @@ export const AllChampionPage = () => {
         () => {
 
         const fetchAllChampion = async () => {
-            const response = await fetch(`http://localhost:8080/${year}/champion`);
+            const response = await fetch(`https://worldsstatistics-backend.herokuapp.com/${year}/champion`);
             const data = await response.json();
             setAllChampion(data);
 
@@ -81,7 +81,7 @@ export const AllChampionPage = () => {
                                 <tr>
                                     <td>{champ.id}</td>
                                     <td>
-                                        <a className="text-decoration-none" style={{color:'white'}} href={"http://localhost:3000/" + year + "/champion/" + champ.champion}>
+                                        <a className="text-decoration-none" style={{color:'white'}} href={"/" + year + "/champion/" + champ.champion}>
                                             <img src={"/championIcon/" + champ.champion + ".jpeg"} width="32" height="32" alt=""/>
                                             {champ.champion}
                                         </a>

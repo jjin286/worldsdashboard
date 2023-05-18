@@ -40,7 +40,7 @@ export const LandingPage = () => {
                     <div style={{textAlign: 'center'}} className='row'>
                         <div className='col-4'>
                             <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/DAMWONlogo.png`} alt=""/>
-                            <div className='rosterButton'><a style={{padding: '15px'}} href={`http://localhost:3000/2020/team/mainTeam/DWG KIA`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
+                            <div className='rosterButton'><a style={{padding: '15px'}} href={`/2020/team/mainTeam/DWG KIA`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
                             <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2020.jpeg`} alt=""/> 
@@ -59,7 +59,7 @@ export const LandingPage = () => {
                     <div style={{textAlign: 'center'}} className='row'>
                         <div className='col-4'>
                             <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/EDward Gaming.png`} alt=""/>
-                            <div className='rosterButton' ><a style={{padding: '15px'}} href={`http://localhost:3000/2021/team/mainTeam/EDward Gaming`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
+                            <div className='rosterButton' ><a style={{padding: '15px'}} href={`/2021/team/mainTeam/EDward Gaming`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
                             <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2021.png`} alt=""/> 
@@ -78,7 +78,7 @@ export const LandingPage = () => {
                     <div style={{textAlign: 'center'}} className='row'>
                         <div className='col-4'>
                             <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/DRX.png`} alt=""/>
-                            <div className='rosterButton'><a style={{padding: '15px'}} href={`http://localhost:3000/2022/team/mainTeam/DRX`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
+                            <div className='rosterButton'><a style={{padding: '15px'}} href={`/2022/team/mainTeam/DRX`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
                             <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2022.png`} alt=""/> 

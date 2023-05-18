@@ -36,8 +36,8 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                             <div className='col-9'>
                                                 <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
-                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
-                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
@@ -66,8 +66,8 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                             <div className='col-9'>
                                                 <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
-                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
-                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
@@ -96,8 +96,8 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                             <div className='col-9'>
                                                 <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
-                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
-                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
@@ -126,8 +126,8 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                             <div className='col-9'>
                                                 <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
-                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
-                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
@@ -156,8 +156,8 @@ export const PlayerTableCard = ({team, teamType, playerData}) => {
                                             <div className='col-9'>
                                                 <img src={`/playerImages/${currentValue.player}${year}.png`} width="150" height="113" alt=""/>
                                                 {teamType === 'mainTeam' 
-                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
-                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`http://localhost:3000/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                ? <a style={{color: 'white', textDecoration: 'none'}}href={`/${year}/mainPlayer/${currentValue.player}`}>{currentValue.player}</a>
+                                                : <a style={{color: 'white', textDecoration: 'none'}}href={`/${year}/playInPlayer/${currentValue.player}`}>{currentValue.player}</a>
                                                 }
                                             </div>
                                             <div className='col-2'>
