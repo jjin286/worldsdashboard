@@ -17,10 +17,10 @@ export const SideBar = ({year}) => {
               <hr className="text-secondary" />
               <ul className="nav nav-pills flex-column">
                 <li className="nav-item">
-                  <a href={`${window.location.protocol}${window.location.hostname}/${year}/team/mainTeam`} className="nav-link text-white fs-5" aria-current="page">
+                  <Link to={`/${year}/team/mainTeam`}>
                     <i className="bi bi-people-fill"></i>
                     <span className="ms-2">Main Stage Teams</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a href={`${window.location.protocol}${window.location.hostname}/${year}/team/playInTeam`} className="nav-link text-white fs-5" aria-current="page">
