@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { PlayerStatCard } from './PlayerStatCard';
+
 
 export const PlayerCard = ({player, year}) => {
     const winrate = player.winrate?.slice(0, -1);
@@ -10,7 +10,7 @@ export const PlayerCard = ({player, year}) => {
         <div className='container'>
             <div className='playerCard row'>
                 <div className='col-2'>
-                    <img src={`/playerImages/${player.player}${year}.png`} width="235" height="180"/>
+                    <img src={`/playerImages/${player.player}${year}.png`} width="235" height="180" alt=""/>
                 </div>
                 <div className='col-3'>
                     {/* <hr style={{width: '1px', height: '20px', display: 'inline-block'}}/>    */}
@@ -19,7 +19,7 @@ export const PlayerCard = ({player, year}) => {
                         {
 
                         }
-                        <h3><img src={`/images/${player.position}.svg`}/> {player.position}</h3>
+                        <h3><img src={`/images/${player.position}.svg`} alt=""/> {player.position}</h3>
                         <h3>{player.team}</h3>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export const PlayerCard = ({player, year}) => {
                     <h9 style={{ paddingLeft : '5px'}}>{player.kda} KDA</h9>  
                 </div>
                 <div className='col-2'>
-                    <img src={`/teamLogos/${player.team}.png`} width="200" height="200"/>
+                    <img src={`/teamLogos/${player.team}.png`} width="200" height="200" alt=""/>
                 </div>
             </div>         
         </div>

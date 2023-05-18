@@ -4,7 +4,7 @@ import { WorldsNavbar } from '../components/WorldsNavbar';
 import { useParams } from 'react-router-dom';
 import { TeamCard } from '../components/TeamCard';
 import { PlayerTableCard } from '../components/PlayerTableCard';
-import { TeamStatCard } from '../components/TeamStatCard';
+
 
 export const TeamPage = () => {
     const { year, teamName, teamType } = useParams();
@@ -30,7 +30,7 @@ export const TeamPage = () => {
                 // console.log(players);
             }
             fetchPlayers();
-            }, []
+            }, [teamName, teamType, teams.team, year]
     );
 
     const findHighest = (field) => {
@@ -79,7 +79,7 @@ export const TeamPage = () => {
                                         <div className='row'>
                                             <div style={{textAlign: 'center'}} className='statCard col'>
                                                 <p style={{margin: 0}}>Most Kills</p>
-                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("kills").player}${year}.png`} width="150" height="120"/>
+                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("kills").player}${year}.png`} width="150" height="120" alt=""/>
                                                 <div className='row'>
                                                     <div className='col'>
                                                         <h5>{findHighest("kills").player}</h5>
@@ -91,7 +91,7 @@ export const TeamPage = () => {
                                             </div>
                                             <div style={{textAlign: 'center'}} className='statCard col'>
                                                 <p style={{margin: 0}}>Most Deaths</p>
-                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("deaths").player}${year}.png`} width="150" height="120"/>
+                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("deaths").player}${year}.png`} width="150" height="120" alt=""/>
                                                 <div className='row'>
                                                     <div className='col'>
                                                         <h5>{findHighest("deaths").player}</h5>
@@ -103,7 +103,7 @@ export const TeamPage = () => {
                                             </div>
                                             <div style={{textAlign: 'center'}} className='statCard col'>
                                                 <p style={{margin: 0}}>Most Assists</p>
-                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("assists").player}${year}.png`} width="150" height="120"/>
+                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("assists").player}${year}.png`} width="150" height="120" alt=""/>
                                                 <div className='row'>
                                                     <div className='col'>
                                                         <h5>{findHighest("assists").player}</h5>
@@ -115,7 +115,7 @@ export const TeamPage = () => {
                                             </div>
                                             <div style={{textAlign: 'center'}} className='statCard col'>
                                                 <p style={{margin: 0}}>Most Gold Per Minute</p>
-                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("averageGoldPerMinute").player}${year}.png`} width="150" height="120"/>
+                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("averageGoldPerMinute").player}${year}.png`} width="150" height="120" alt=""/>
                                                 <div className='row'>
                                                     <div className='col'>
                                                         <h5>{findHighest("averageGoldPerMinute").player}</h5>
@@ -127,7 +127,7 @@ export const TeamPage = () => {
                                             </div>
                                             <div style={{textAlign: 'center'}} className='statCard col'>
                                                 <p style={{margin: 0}}>Most Damage Per Minute</p>
-                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("damagePerMinute").player}${year}.png`} width="150" height="120"/>
+                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("damagePerMinute").player}${year}.png`} width="150" height="120" alt=""/>
                                                 <div className='row'>
                                                     <div className='col'>
                                                         <h5>{findHighest("damagePerMinute").player}</h5>
@@ -139,7 +139,7 @@ export const TeamPage = () => {
                                             </div>
                                             <div style={{textAlign: 'center'}} className='statCard col'>
                                                 <p style={{margin: 0}}>Most Kill Participation</p>
-                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("kp").player}${year}.png`} width="150" height="120"/>
+                                                <img style={{marginBottom: '5px'}}src={`/playerImages/${findHighest("kp").player}${year}.png`} width="150" height="120" alt=""/>
                                                 <div className='row'>
                                                     <div className='col'>
                                                         <h5>{findHighest("kp").player}</h5>

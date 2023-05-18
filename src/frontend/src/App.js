@@ -5,7 +5,7 @@ import { AllChampionPage } from './pages/AllChampionPage';
 import { AllPlayerPage } from './pages/AllPlayerPage';
 import { PlayerPage } from './pages/PlayerPage';
 import { TeamPage } from './pages/TeamPage';
-import { AllTeam, MainTeam } from './pages/AllTeam';
+import { AllTeam } from './pages/AllTeam';
 import { LandingPage } from './pages/LandingPage';
 
 function App() {

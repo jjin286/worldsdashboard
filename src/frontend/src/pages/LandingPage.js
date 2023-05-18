@@ -9,7 +9,7 @@ export const LandingPage = () => {
                 <div id='topBar'>
                     <div className='row'>
                         <div className='col'>
-                            <img style={{margin:'12px 0 12px 0'}} src={`/images/Worldslogo.png`} width='40' height='40'/>
+                            <img style={{margin:'12px 0 12px 0'}} src={`/images/Worldslogo.png`} width='40' height='40' alt=""/>
                         </div>
                         <div className='col'>
                             <DropDown year="2020"/>
@@ -39,11 +39,11 @@ export const LandingPage = () => {
                     </div>
                     <div style={{margin: '0 0 0 200px'}} className='row'>
                         <div className='col-4'>
-                            <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/DAMWONlogo.png`} />
+                            <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/DAMWONlogo.png`} alt=""/>
                             <div style={{backgroundColor: '#9E9EB1', borderRadius: '60px', textAlign: 'center', width: '35%', marginLeft: '120px'}}><a style={{padding: '15px'}} href={`http://localhost:3000/2020/team/mainTeam/DWG KIA`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
-                            <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2020.jpeg`} /> 
+                            <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2020.jpeg`} alt=""/> 
                         </div>
                         
                     </div>
@@ -58,11 +58,11 @@ export const LandingPage = () => {
                     </div>
                     <div style={{margin: '0 0 0 200px'}} className='row'>
                         <div className='col-4'>
-                            <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/EDward Gaming.png`} />
+                            <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/EDward Gaming.png`} alt=""/>
                             <div style={{backgroundColor: '#9E9EB1', borderRadius: '60px', textAlign: 'center', width: '35%', marginLeft: '120px'}}><a style={{padding: '15px'}} href={`http://localhost:3000/2021/team/mainTeam/EDward Gaming`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
-                            <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2021.png`} /> 
+                            <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2021.png`} alt=""/> 
                         </div>
                         
                     </div>
@@ -77,11 +77,11 @@ export const LandingPage = () => {
                     </div>
                     <div style={{margin: '0 0 0 200px'}} className='row'>
                         <div className='col-4'>
-                            <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/DRX.png`} />
+                            <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/DRX.png`} alt=""/>
                             <div style={{backgroundColor: '#9E9EB1', borderRadius: '60px', textAlign: 'center', width: '35%', marginLeft: '120px'}}><a style={{padding: '15px'}} href={`http://localhost:3000/2022/team/mainTeam/DRX`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
-                            <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2022.png`} /> 
+                            <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2022.png`} alt=""/> 
                         </div>
                         
                     </div>
