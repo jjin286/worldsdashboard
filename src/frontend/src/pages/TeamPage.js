@@ -4,7 +4,7 @@ import { WorldsNavbar } from '../components/WorldsNavbar';
 import { useParams } from 'react-router-dom';
 import { TeamCard } from '../components/TeamCard';
 import { PlayerTableCard } from '../components/PlayerTableCard';
-
+ 
 
 export const TeamPage = () => {
     const { year, teamName, teamType } = useParams();
@@ -48,7 +48,7 @@ export const TeamPage = () => {
 
     if(!teams.team){
         return(
-            <div style={{overflow: 'hidden'}} className="TeamPage">
+            <div  className="TeamPage">
                 <div className='row g-0'>
                     <div className='col-2'>
                         <SideBar year={year}/>
@@ -63,7 +63,7 @@ export const TeamPage = () => {
     }
 
     return(
-        <div style={{overflow: 'hidden'}} className="TeamPage">
+        <div  className="TeamPage">
             <div className='row g-0'>
                 <div className='col-2'>
                     <SideBar year={year}/>

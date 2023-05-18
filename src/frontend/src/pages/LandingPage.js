@@ -37,10 +37,10 @@ export const LandingPage = () => {
                         <h1>Worlds 2020 Tournament Winner</h1>
                         
                     </div>
-                    <div style={{margin: '0 0 0 200px'}} className='row'>
+                    <div style={{textAlign: 'center'}} className='row'>
                         <div className='col-4'>
                             <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/DAMWONlogo.png`} alt=""/>
-                            <div style={{backgroundColor: '#9E9EB1', borderRadius: '60px', textAlign: 'center', width: '35%', marginLeft: '120px'}}><a style={{padding: '15px'}} href={`http://localhost:3000/2020/team/mainTeam/DWG KIA`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
+                            <div className='rosterButton'><a style={{padding: '15px'}} href={`http://localhost:3000/2020/team/mainTeam/DWG KIA`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
                             <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2020.jpeg`} alt=""/> 
@@ -56,10 +56,10 @@ export const LandingPage = () => {
                         <h1>Worlds 2021 Tournament Winner</h1>
                         
                     </div>
-                    <div style={{margin: '0 0 0 200px'}} className='row'>
+                    <div style={{textAlign: 'center'}} className='row'>
                         <div className='col-4'>
                             <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/EDward Gaming.png`} alt=""/>
-                            <div style={{backgroundColor: '#9E9EB1', borderRadius: '60px', textAlign: 'center', width: '35%', marginLeft: '120px'}}><a style={{padding: '15px'}} href={`http://localhost:3000/2021/team/mainTeam/EDward Gaming`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
+                            <div className='rosterButton' ><a style={{padding: '15px'}} href={`http://localhost:3000/2021/team/mainTeam/EDward Gaming`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
                             <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2021.png`} alt=""/> 
@@ -75,10 +75,10 @@ export const LandingPage = () => {
                         <h1>Worlds 2022 Tournament Winner</h1>
                         
                     </div>
-                    <div style={{margin: '0 0 0 200px'}} className='row'>
+                    <div style={{textAlign: 'center'}} className='row'>
                         <div className='col-4'>
                             <img style={{width:'80%', height: 'auto'}} src={`/teamLogos/DRX.png`} alt=""/>
-                            <div style={{backgroundColor: '#9E9EB1', borderRadius: '60px', textAlign: 'center', width: '35%', marginLeft: '120px'}}><a style={{padding: '15px'}} href={`http://localhost:3000/2022/team/mainTeam/DRX`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
+                            <div className='rosterButton'><a style={{padding: '15px'}} href={`http://localhost:3000/2022/team/mainTeam/DRX`} className='text-decoration-none d-flex align-itemcenter text-white ms-3 mt-2'>View Roster</a></div>
                         </div>
                         <div className='col-8'>
                             <img style={{width:'85%', height: 'auto', borderRadius: '50px'}} src={`/images/worldswinner2022.png`} alt=""/> 

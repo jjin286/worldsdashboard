@@ -6,7 +6,7 @@ export const TeamCard = ({team, year}) => {
     // const gamesLost = player.goldPerMinute - gamesWon;
 
     return(
-        <div className='container'>
+        <div className='TeamCard'>
             <div style={{marginBottom: '12px'}} className='playerCard row'>
                 <div className='col-2'>
                     <img src={`/teamLogos/${team.team}.png`} width="200" height="200" alt=""/>

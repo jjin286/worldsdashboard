@@ -13,7 +13,7 @@ export const TeamStatCard = ({stat}) =>{
 
 
     return(
-        <div className='container'>
+        <div className='TeamStatCard'>
             <div className='row'>
                 <div style={{padding: '0'}} className='col'>
                     <div className='statCard'>
