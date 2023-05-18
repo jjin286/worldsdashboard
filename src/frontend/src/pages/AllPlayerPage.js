@@ -20,7 +20,7 @@ export const AllPlayerPage = () => {
     useEffect(
         () => {
             const fetchPlayers = async () => {
-                const response = await fetch(`http://localhost:8080/${year}/${playerType}`);
+                const response = await fetch(`https://worldsstatistics-backend.herokuapp.com/${year}/${playerType}`);
                 const data = await response.json();
                 setPlayers(data);
                 console.log(players);

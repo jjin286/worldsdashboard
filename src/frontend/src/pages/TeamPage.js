@@ -14,8 +14,8 @@ export const TeamPage = () => {
     useEffect(
         () => {
             const fetchTeam = async () => {
-                // console.log(`http://localhost:8080/${year}/${teamType}/${teamName}`);
-                const response = await fetch(`http://localhost:8080/${year}/${teamType}/${teamName}`);
+                // console.log(`https://worldsstatistics-backend.herokuapp.com/${year}/${teamType}/${teamName}`);
+                const response = await fetch(`https://worldsstatistics-backend.herokuapp.com/${year}/${teamType}/${teamName}`);
                 const data = await response.json();
                 setTeams(data);
                 console.log(teams.team);
@@ -23,8 +23,8 @@ export const TeamPage = () => {
             fetchTeam();
 
             const fetchPlayers = async () => {   
-                // console.log(`http://localhost:8080/${year}/mainPlayer/findByTeam/${teamName}`);
-                const response = await fetch( teamType === "mainTeam" ? `http://localhost:8080/${year}/mainPlayer/findByTeam/${teamName}` : `http://localhost:8080/${year}/playInPlayer/findByTeam/${teamName}`);
+                // console.log(`https://worldsstatistics-backend.herokuapp.com/${year}/mainPlayer/findByTeam/${teamName}`);
+                const response = await fetch( teamType === "mainTeam" ? `https://worldsstatistics-backend.herokuapp.com/${year}/mainPlayer/findByTeam/${teamName}` : `https://worldsstatistics-backend.herokuapp.com/${year}/playInPlayer/findByTeam/${teamName}`);
                 const data = await response.json();
                 setPlayers(data);
                 // console.log(players);
