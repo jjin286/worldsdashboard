@@ -12,7 +12,7 @@ export const ChampionPage = () => {
   useEffect(
     () => {
       const fetchChampion = async () => {
-        const response = await fetch(`https://worldsstatistics-backend.herokuapp.com/${year}/champion/${championName}`);
+        const response = await fetch(`http://localhost:8080/${year}/champion/${championName}`);
         const data = await response.json();
         setChampion(data);
       };

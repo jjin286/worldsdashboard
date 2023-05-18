@@ -12,8 +12,8 @@ export const PlayerPage = () => {
     useEffect(
         () => {
             const fetchPlayer = async () =>{
-                console.log(`https://worldsstatistics-backend.herokuapp.com/${year}/${playerType}/${playerName}`);
-                const response = await fetch(`https://worldsstatistics-backend.herokuapp.com/${year}/${playerType}/${playerName}`);
+                console.log(`http://localhost:8080/${year}/${playerType}/${playerName}`);
+                const response = await fetch(`http://localhost:8080/${year}/${playerType}/${playerName}`);
                 const data = await response.json();
                 setPlayer(data);
                 console.log(player);

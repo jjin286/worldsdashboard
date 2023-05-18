@@ -20,7 +20,7 @@ export const AllTeam = () => {
     useEffect(
         () => {
             const fetchTeams = async () => {
-                const response = await fetch(`https://worldsstatistics-backend.herokuapp.com/${year}/${teamType}`);
+                const response = await fetch(`http://localhost:8080/${year}/${teamType}`);
                 const data = await response.json();
                 setTeams(data);
                 console.log(teams);

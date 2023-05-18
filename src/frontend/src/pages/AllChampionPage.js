@@ -15,7 +15,7 @@ export const AllChampionPage = () => {
         () => {
 
         const fetchAllChampion = async () => {
-            const response = await fetch(`https://worldsstatistics-backend.herokuapp.com/${year}/champion`);
+            const response = await fetch(`http://localhost:8080/${year}/champion`);
             const data = await response.json();
             setAllChampion(data);
 
