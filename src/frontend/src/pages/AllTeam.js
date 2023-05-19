@@ -27,7 +27,7 @@ export const AllTeam = () => {
             }
 
             fetchTeams();
-        }, [teamType, teams, year]
+        }, [ ]
     );
 
     useEffect(
@@ -47,7 +47,7 @@ export const AllTeam = () => {
             setTeams( 
                 sortBy.ascending ? sortedTeam : sortedTeam.reverse()
             );
-        }, [teams, sortBy]
+        }, [sortBy]
     );
 
     const onClickSort = (key, ascending) => {

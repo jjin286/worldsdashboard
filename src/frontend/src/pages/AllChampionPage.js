@@ -24,7 +24,7 @@ export const AllChampionPage = () => {
         
         fetchAllChampion();
 
-        }, [allChampion, year]
+        }, [ year ]
     );
 
     useEffect(
@@ -44,7 +44,7 @@ export const AllChampionPage = () => {
             setAllChampion( 
                 sortBy.ascending ? sortedChampion : sortedChampion.reverse()
             );
-        }, [allChampion, sortBy]
+        }, [sortBy]
     );
 
     const onClickSort = (key, ascending) => {

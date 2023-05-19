@@ -27,7 +27,7 @@ export const AllPlayerPage = () => {
             }
 
             fetchPlayers();
-        }, [playerType, players, year]
+        }, []
     );
 
     useEffect(
@@ -47,7 +47,7 @@ export const AllPlayerPage = () => {
             setPlayers( 
                 sortBy.ascending ? sortedPlayer : sortedPlayer.reverse()
             );
-        }, [players, sortBy]
+        }, [sortBy]
     );
 
     const onClickSort = (key, ascending) => {
